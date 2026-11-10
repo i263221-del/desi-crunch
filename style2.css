@@ -1,0 +1,136 @@
+body {
+  background-color: #f5f5dc;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* --- Navigation Bar --- */
+nav {
+  background-color: #4a2c11;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  margin: 0 10px;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  background-color: #6b421e;
+}
+
+/* --- Original Table Styles --- */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  max-width: 600px;
+  background-color: #faf0e6;
+  margin: 20px auto;
+}
+
+td, th {
+  border: 1px solid #d7c4b7;
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background-color: #4a2c11;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+tr:nth-child(even) {
+  background-color: #e8d8c8;
+}
+
+td {
+  color: #3d2314;
+  font-size: 18px;
+}
+
+/* --- Buttons --- */
+button {
+  background-color: #4a2c11;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #6b421e;
+}
+
+/* --- Homepage Specific (New Font) --- */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.home-title {
+  font-family: 'Playfair Display', serif; 
+  font-size: 4em;
+  color: brown; 
+  margin-bottom: 10px;
+}
+
+.home-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  color: brown; 
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  font-size: 18px;
+  padding: 12px 24px;
+}
+
+/* --- Layout Adjustments --- */
+.menu-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-section img {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.billing-container, .contact-container {
+  width: 80%;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+/* --- Contact Form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d7c4b7;
+  border-radius: 4px;
+  background-color: #faf0e6;
+  font-family: Arial, sans-serif;
+}
