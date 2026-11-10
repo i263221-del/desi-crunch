@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* --- Navigation Bar --- */
+
 nav {
   background-color: #4a2c11;
   padding: 15px;
@@ -27,7 +27,6 @@ nav a:hover {
   background-color: #6b421e;
 }
 
-/* --- Original Table Styles --- */
 table {
   border-collapse: collapse;
   width: 80%;
@@ -57,7 +56,7 @@ td {
   font-size: 18px;
 }
 
-/* --- Buttons --- */
+
 button {
   background-color: #4a2c11;
   color: #ffffff;
@@ -72,7 +71,7 @@ button:hover {
   background-color: #6b421e;
 }
 
-/* --- Homepage Specific (New Font) --- */
+
 .home-container {
   display: flex;
   flex-direction: column;
@@ -101,7 +100,7 @@ button:hover {
   padding: 12px 24px;
 }
 
-/* --- Layout Adjustments --- */
+
 .menu-section {
   text-align: center;
   margin-bottom: 40px;
@@ -119,7 +118,7 @@ button:hover {
   text-align: center;
 }
 
-/* --- Contact Form --- */
+
 .contact-form {
   display: flex;
   flex-direction: column;
