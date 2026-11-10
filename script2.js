@@ -1,5 +1,21 @@
 document.addEventListener("DOMContentLoaded", function() {
   
+  // ==========================================
+  // 1. JAVASCRIPT NAVIGATION FIX
+  // Forces the menu links to open via JS
+  // ==========================================
+  var navLinks = document.querySelectorAll("nav a");
+  navLinks.forEach(function(link) {
+    link.addEventListener("click", function(event) {
+      event.preventDefault(); // Stops the standard HTML link behavior
+      var targetPage = this.getAttribute("href");
+      window.location.href = targetPage; // Routes via JavaScript instead
+    });
+  });
+
+  // ==========================================
+  // 2. MENU PAGE LOGIC
+  // ==========================================
   if (document.getElementById("menu-page")) {
     
     var toggleBtn = document.getElementById("toggle-menu-btn");
@@ -53,6 +69,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  // ==========================================
+  // 3. BILLING PAGE LOGIC
+  // ==========================================
   if (document.getElementById("billing-page")) {
     var container = document.getElementById("billing-container");
     var cart = JSON.parse(localStorage.getItem("cafeCart")) || [];
@@ -83,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var receiptHTML = `
       <div style="background-color: #ffffff; width: 100%; max-width: 350px; margin: 0 auto; padding: 20px; border: 2px dashed #4a2c11; font-family: 'Courier New', Courier, monospace; text-align: left; color: #3d2314; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-        <h2 style="text-align: center; margin: 0; font-size: 24px;">CAFE MENU</h2>
+        <h2 style="text-align: center; margin: 0; font-size: 24px;">DESI CRUNCH</h2>
         <p style="text-align: center; margin: 5px 0 20px 0; font-size: 14px;">Official Receipt</p>
         <p style="font-size: 12px; margin-bottom: 15px;">Date: ${currentDate}</p>
         <hr style="border: none; border-top: 1px dashed #4a2c11; margin-bottom: 15px;">
@@ -133,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function() {
     checkoutBtn.style.marginTop = "25px";
     
     checkoutBtn.onclick = function() {
-      // Displays the confirmation message along with the receipt without leaving the page
       var successMessage = `
         <div style="text-align: center; margin-bottom: 20px;">
           <h1 style="color: #4a2c11;">✅ Order Confirmed!</h1>
@@ -147,10 +165,7 @@ document.addEventListener("DOMContentLoaded", function() {
         </div>
       `;
       
-      // Overwrite the container with the success message, the bill, and a return button
       container.innerHTML = successMessage + receiptHTML + homeButton;
-      
-      // Clear the local storage so the cart is empty for the next visit
       localStorage.removeItem("cafeCart");
     };
     
